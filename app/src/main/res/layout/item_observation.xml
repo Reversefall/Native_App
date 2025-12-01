@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Observation text -->
+        <TextView
+            android:id="@+id/tvObservation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Observation text"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <!-- Observation time -->
+        <TextView
+            android:id="@+id/tvObservationTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2025-11-11 12:00:00"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Optional comments -->
+        <TextView
+            android:id="@+id/tvObservationComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comments..."
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

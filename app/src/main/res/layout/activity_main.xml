@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC"
+    tools:context=".MainActivity">
+
+    <!-- Gradient-style header -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="322dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="41dp"
+        android:gravity="center"
+        android:text="Hiking Management"
+        android:textColor="#3F51B5"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Add Hike Button - Blue -->
+
+    <!-- View All Hikes Button - Purple -->
+
+    <!-- Search Hike Button - Teal -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddHike"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="49dp"
+        android:backgroundTint="#1976D2"
+        android:iconTint="#FFFFFF"
+        android:text="Add Hike"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:cornerRadius="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnViewAll"
+        app:layout_constraintEnd_toStartOf="@+id/btnSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintWidth_percent="0.8"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnViewAll"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="139dp"
+        android:backgroundTint="#9C27B0"
+        android:iconTint="#FFFFFF"
+        android:text="View All"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:cornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddHike"
+        app:layout_constraintWidth_percent="0.8"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSearch"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="#009688"
+        android:iconTint="#FFFFFF"
+        android:text="Search"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:cornerRadius="22dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnAddHike"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAddHike"
+        app:layout_constraintWidth_percent="0.8"
+        app:strokeWidth="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="416dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="134dp"
+        android:layout_marginBottom="146dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnObservation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnObservation"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="164dp"
+        android:backgroundTint="#FF5722"
+        android:iconTint="#FFFFFF"
+        android:text="Observation"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:cornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        app:strokeWidth="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
