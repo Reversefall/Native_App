@@ -24,11 +24,6 @@ public class AddHikeActivity extends AppCompatActivity {
     private RadioGroup rgParking;
     private Button btnSave;
     private DatabaseHelper db;
-
-    private int EditId = -1;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

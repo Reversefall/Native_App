@@ -23,7 +23,7 @@ public class ObservationActivity extends AppCompatActivity {
     private ArrayList<Observation> observationList;
     private long hikeId;
     private DatabaseHelper db;
-    private androidx.appcompat.widget.AppCompatImageButton btnAddObservation;
+    private com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton btnAddObservation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

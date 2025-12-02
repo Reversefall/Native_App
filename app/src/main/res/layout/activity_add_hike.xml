@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
@@ -11,147 +10,119 @@
         android:layout_height="wrap_content"
         android:padding="24dp">
 
-        <!-- Header -->
+        <!-- Tiêu đề -->
         <TextView
             android:id="@+id/tvPageName"
-            android:layout_width="291dp"
-            android:layout_height="66dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="15dp"
-            android:background="#F1F1F1"
-            android:gravity="center"
-            android:text="Add/Edit Hike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add / Edit Hike"
             android:textColor="#222222"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="12dp"
+            android:background="#F5F5F5"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <!-- Hike Name -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilName"
-            android:layout_width="300dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Hike Name"
+            app:layout_constraintTop_toBottomOf="@id/tvPageName"
+            android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvPageName">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:hint="Hike Name"
-                android:textColor="#222222"
-                android:textColorHint="#757575" />
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Location -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilLocation"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tilName"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilName">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etLocation"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:hint="Location"
-                android:textColor="#222222"
-                android:textColorHint="#757575" />
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Date -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilDate"
-            android:layout_width="300dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Date (YYYY-MM-DD)"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tilLocation"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilLocation">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etDate"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:hint="Date (YYYY-MM-DD)"
-                android:textColor="#222222"
-                android:textColorHint="#757575" />
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Distance -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilDistance"
-            android:layout_width="300dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Distance (km)"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tilDate"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilDate">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etDistance"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:hint="Distance (km)"
-                android:inputType="numberDecimal"
-                android:textColor="#222222"
-                android:textColorHint="#757575" />
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Description -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilDescription"
-            android:layout_width="300dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tilDistance"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilDistance">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etDescription"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:hint="Description"
-                android:textColor="#222222"
-                android:textColorHint="#757575" />
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Difficulty Spinner -->
-
-        <!-- Save Button -->
-
+        <!-- Difficulty label -->
         <TextView
             android:id="@+id/tvDifficulty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="200dp"
-            android:text="Difficulty:"
-            android:textColor="#222222"
+            android:text="Difficulty"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.371"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilDescription" />
+            android:textColor="#222222"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tilDescription"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Spinner
             android:id="@+id/spDifficulty"
@@ -165,72 +136,76 @@
             app:layout_constraintStart_toEndOf="@+id/tvDifficulty"
             app:layout_constraintTop_toBottomOf="@+id/tilDescription" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSave"
-            android:layout_width="230dp"
-            android:layout_height="68dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="40dp"
-            android:backgroundTint="#1976D2"
-            android:text="Save"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:cornerRadius="22dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etWeather"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etWeather"
-            android:layout_width="324dp"
-            android:layout_height="61dp"
-            android:layout_marginTop="15dp"
-            android:hint="Weather"
-            android:textColor="#222222"
-            android:textColorHint="#757575"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rgParking" />
-
+        <!-- Parking Label -->
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="61dp"
-            android:layout_height="16dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="30dp"
+            android:id="@+id/tvParking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Parking"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDifficulty" />
+            android:textSize="16sp"
+            android:textColor="#222222"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/spDifficulty"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-
+        <!-- Parking yes/no -->
         <RadioGroup
             android:id="@+id/rgParking"
-            android:layout_width="205dp"
-            android:layout_height="58dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/spDifficulty">
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvParking"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <RadioButton
                 android:id="@+id/Yes"
-                android:layout_width="77dp"
-                android:layout_height="29dp"
-                android:layout_marginEnd="100dp"
-                android:text="Y" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/No"
-                android:layout_width="77dp"
-                android:layout_height="29dp"
-                android:text="N" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:layout_marginStart="24dp"/>
         </RadioGroup>
 
+        <!-- Weather -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilWeather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Weather"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/rgParking"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWeather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Save button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:backgroundTint="#1976D2"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            app:cornerRadius="18dp"
+            app:layout_constraintTop_toBottomOf="@id/tilWeather"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>
