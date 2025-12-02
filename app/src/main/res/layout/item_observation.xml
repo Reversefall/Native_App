@@ -13,7 +13,6 @@
         android:orientation="vertical"
         android:padding="12dp">
 
-        <!-- Observation text -->
         <TextView
             android:id="@+id/tvObservation"
             android:layout_width="match_parent"
@@ -23,7 +22,6 @@
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
-        <!-- Observation time -->
         <TextView
             android:id="@+id/tvObservationTime"
             android:layout_width="match_parent"
@@ -33,7 +31,6 @@
             android:textColor="@android:color/darker_gray"
             android:layout_marginTop="4dp"/>
 
-        <!-- Optional comments -->
         <TextView
             android:id="@+id/tvObservationComments"
             android:layout_width="match_parent"
@@ -44,6 +41,26 @@
             android:layout_marginTop="4dp"
             android:visibility="gone"/>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
 
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:backgroundTint="@android:color/holo_red_light"/>
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

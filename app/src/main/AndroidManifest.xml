@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HikingManagement">
         <activity
-            android:name=".ui.ViewObservationsActivity"
+            android:name=".ui.ObservationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.AddObservationActivity"
+            android:name=".ui.AddEditObservationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.EditHikeActivity"

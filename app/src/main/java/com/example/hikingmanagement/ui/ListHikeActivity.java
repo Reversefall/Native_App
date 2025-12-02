@@ -119,9 +119,9 @@ public class ListHikeActivity extends AppCompatActivity implements HikeAdapter.H
     }
     @Override
     public void onAddObservation(Hike h) {
-        // open AddObservationActivity
-        Intent intent = new Intent(ListHikeActivity.this, AddObservationActivity.class);
+        Intent intent = new Intent(ListHikeActivity.this, ObservationActivity.class);
         intent.putExtra("hikeId", h.getId());
         startActivity(intent);
     }
+
 }

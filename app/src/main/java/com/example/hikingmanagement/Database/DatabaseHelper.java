@@ -215,6 +215,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return rows;
     }
 
+    public Observation getObservation(long observationId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Observation observation = null;
+
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_OBSERVATIONS +
+                " WHERE " + COL_OBS_ID + "=?", new String[]{String.valueOf(observationId)});
+
+        if (cursor.moveToFirst()) {
+            observation = new Observation();
+            observation.setId(cursor.getLong(cursor.getColumnIndexOrThrow(COL_OBS_ID)));
+            observation.setHikeId(cursor.getLong(cursor.getColumnIndexOrThrow(COL_OBS_HIKE_ID)));
+            observation.setObservation(cursor.getString(cursor.getColumnIndexOrThrow(COL_OBS_OBSERVATION)));
+            observation.setTime(cursor.getString(cursor.getColumnIndexOrThrow(COL_OBS_TIME)));
+            observation.setComments(cursor.getString(cursor.getColumnIndexOrThrow(COL_OBS_COMMENTS)));
+        }
+
+        cursor.close();
+        db.close();
+        return observation;
+    }
+
     public boolean deleteObservation(long id) {
         SQLiteDatabase db = this.getWritableDatabase();
         int result = db.delete(TABLE_OBSERVATIONS, COL_OBS_ID + "=?",
@@ -225,13 +246,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public ArrayList<Observation> getObservationsByHikeId(long hikeId) {
         ArrayList<Observation> list = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM observation WHERE hikeId=?", new String[]{String.valueOf(hikeId)});
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_OBSERVATIONS + " WHERE " + COL_OBS_HIKE_ID + "=?", new String[]{String.valueOf(hikeId)});
+
 
         if (cursor.moveToFirst()) {
             do {
                 Observation obs = new Observation();
                 obs.setId(cursor.getLong(cursor.getColumnIndexOrThrow("id")));
-                obs.setHikeId(cursor.getLong(cursor.getColumnIndexOrThrow("hikeId")));
+                obs.setHikeId(cursor.getLong(cursor.getColumnIndexOrThrow("hike_id")));
                 obs.setObservation(cursor.getString(cursor.getColumnIndexOrThrow("observation")));
                 obs.setTime(cursor.getString(cursor.getColumnIndexOrThrow("time")));
                 obs.setComments(cursor.getString(cursor.getColumnIndexOrThrow("comments")));
